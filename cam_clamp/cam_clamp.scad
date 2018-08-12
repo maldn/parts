@@ -7,7 +7,7 @@ translate([30, -30, 0]) bolt();
 translate([30, -60, 0]) joint();
 
 
-module bolt(d=14, h=55){
+module bolt(d=14, h=30){
 	cylinder(10, r=d, $fn=6);
 	translate([0, 0, 10]) screw_thread(d, 4, 55, h-10, PI/2, 2);
 }
@@ -40,7 +40,7 @@ module clamp() {
 	}
 }
 
-module joint(ball_d=15, shaft_h=20, shaft_d=10) {
+module joint(ball_d=15, shaft_h=15, shaft_d=10) {
 	// height of the cap we cut off h = R - sqrt(R²-r²) where R = ball radius and r = cylinder radius
 	cap_height = (ball_d/2) - sqrt((ball_d/2)*(ball_d/2)-(shaft_d/2)*(shaft_d/2));
 	translate([0, 0, -cap_height]) {
