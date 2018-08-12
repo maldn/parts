@@ -2,7 +2,7 @@ include <polyScrewThread.scad>
 
 $fn=100;
 
-rotate([90, 0, 0]) clamp();
+translate([0, -3, 3]) rotate([90, 0, 0]) clamp();
 translate([30, -30, 0]) bolt();
 translate([30, -60, 0]) joint();
 
