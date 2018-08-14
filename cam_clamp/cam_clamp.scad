@@ -3,8 +3,8 @@ include <polyScrewThread.scad>
 $fn=100;
 
 translate([0, -3, 3]) rotate([90, 0, 0]) clamp();
-translate([30, -30, 0]) bolt();
-translate([30, -60, 0]) joint();
+translate([30, -20, 0]) bolt();
+translate([50, -20, 0]) joint();
 
 bolt_thread_d = 12;
 joint_thread_d = 10;
@@ -21,7 +21,7 @@ module clamp() {
 	inner_w = 60 + minkowski_delta;
 	thickness = 7 - minkowski_delta;
 	back_h = 80 - minkowski_delta;
-	front_h = 40 - minkowski_delta;
+	front_h = 25 - minkowski_delta;
 	difference() {
 		minkowski()	{
 			sphere(r=corner_r);
